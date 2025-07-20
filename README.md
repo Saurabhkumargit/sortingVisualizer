@@ -1,42 +1,77 @@
+
 # Sorting Visualizer
 
-[Download](https://github.com/dipesh-m/Sorting-Visualizer/releases/tag/1.0)
+A desktop application that visually demonstrates how different sorting algorithms work using animated bars.
+Built for students, educators, and anyone interested in understanding sorting algorithms in an intuitive and interactive way.
 
-Visualization of different sorting algorithms in C++ with SDL2 Library.
+## 🚀 Features
 
-A sorting algorithm is an algorithm that puts the elements of a list in a certain order. While there are a large number of sorting algorithms, in practical implementations a few algorithms predominate.
-In this implementation of sorting visualizer, we'll be looking at some of these sorting algorithms and visually comprehend their working.
-The sorting algorithms covered here are Selection Sort, Insertion Sort, Bubble Sort, Merge Sort, Quick Sort and Heap Sort.
-The list size is fixed to 130 elements. You can randomize the list and select any type of sorting algorithm to call on the list from the given options. Here, all sorting algorithms will sort the elements in ascending order. The sorting time being visualized for an algorithm is not exactly same as their actual time complexities. The relatively faster algorithms like Merge Sort, etc. have been delayed so that they could be properly visualized.
-
-# How to run:-
-
-Option 1.) You can run Sorting Visualizer directly from the release. Download the release and run the .exe application i.e., Sorting Visualizer.exe -> [Download](https://github.com/dipesh-m/Sorting-Visualizer/releases/tag/1.0)
-
-Option 2.) You can also run Sorting Visualizer using the C++ source code available in the repository i.e., Sorting Visualizer.cpp but you will need to install and setup the SDL2 library first. I recommend you follow Lazy Foo' Productions' tutorial to setup SDL2 Library. PLEASE NOTE THAT the tutorial follows to setup SDL2 32-bit library but to run Sorting Visualizer, you have to use the 64-bit library. Just use x86_64-w64-mingw32 folder instead of i686-w64-mingw32 to setup the SDL2 files.-> [How to download and setup SDL2 library](http://lazyfoo.net/tutorials/SDL/01_hello_SDL/index.php).
-After setting up the SDL2 library, just include the Sorting Visualizer.cpp file from the repository in your project with the build options as mentioned in the tutorial and build and run the project.
-
-# Controls:-
-
-WARNING: Giving repetitive commands may cause latency and the visualizer may behave unexpectedly. Please give a new command only after the current command's execution is done.
-
-Available Controls inside Sorting Visualizer:-
-- Use 0 to Generate a different randomized list.
-- Use 1 to start Selection Sort Algorithm.
-- Use 2 to start Insertion Sort Algorithm.
-- Use 3 to start Bubble Sort Algorithm.
-- Use 4 to start Merge Sort Algorithm.
-- Use 5 to start Quick Sort Algorithm.
-- Use 6 to start Heap Sort Algorithm.
-- Use q to exit out of Sorting Visualizer
-
-# Samples
-
-- Sample 1 (Insertion Sort)
-
-![](samples/example1.gif)
+- Visual representation of 6 classic sorting algorithms
+- Light-themed UI with smooth animations
+- Color-coded comparisons, swaps, and sorted bars
+- Outlined bars for improved visual clarity
+- Adjustable array size and delay (via source code)
 
 
-- Sample 2 (Merge Sort)
+## Run Locally
 
-![](samples/example2.gif)
+Clone the project
+
+```bash
+  git clone https://github.com/saurabhkumargit/sortingvisualizer.git
+```
+
+Go to the project directory
+
+```bash
+  cd sortingvisualizer
+```
+
+Compile using g++
+
+```bash
+  g++ "Sorting Visualizer.cpp" ^
+ -IC:\Path\To\SDL2\include\SDL2 ^
+ -LC:\Path\To\SDL2\lib ^
+ -lmingw32 -lSDL2main -lSDL2 -o SortingVisualizer.exe
+
+```
+
+Copy SDL2.dll into the same directory:
+
+```bash
+  copy C:\Path\To\SDL2\bin\SDL2.dll .
+```
+
+Run the application:
+
+```bash
+SortingVisualizer.exe
+```
+## 🧱 Tech Stack
+
+
+**Language:**  
+- C++17
+
+**Libraries:**  
+- SDL2 (v2.28.5)
+
+**Platform:**  
+- Windows (MinGW-w64)
+
+**Editor:**  
+- Visual Studio Code (recommended)
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 📸 Demo
+
+Here's a glimpse of the Sorting Visualizer in action:
+
+![Initial State](demo/image1.png)
+*Initial unsorted array*
+
+![During Sorting](demo/image2.png)
+*Bars moving during sorting*
